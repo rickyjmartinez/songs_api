@@ -3,4 +3,15 @@ class SongsController < ApplicationController
     @songs = Song.all
     render :index
   end
+
+  def create #enter a new song
+    @song = Song.create(
+      title: params[:title],
+      album: params[:album],
+      artist: params[:artist],
+      year: params[:year],
+    )
+
+    render :show
+  end
 end

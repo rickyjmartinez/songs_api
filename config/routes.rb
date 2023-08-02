@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   #first route index
   get "/songs" => "songs#index"
+  post "/songs" => "songs#create"
 end
