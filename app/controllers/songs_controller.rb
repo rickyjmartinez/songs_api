@@ -11,7 +11,11 @@ class SongsController < ApplicationController
       artist: params[:artist],
       year: params[:year],
     )
+    render :show
+  end
 
+  def show #shows a song by id
+    @song = Song.find_by(id: params[:id])
     render :show
   end
 end
