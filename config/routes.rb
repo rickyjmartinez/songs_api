@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   get "/songs/:id" => "songs#show"
   #update
   patch "/songs/:id" => "songs#update"
+  #destroy
+  delete "songs/:id" => "songs#destroy"
 end

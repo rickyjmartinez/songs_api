@@ -31,4 +31,10 @@ class SongsController < ApplicationController
       render :show
     end
   end
+
+  def destroy #destroy a song by id
+    @song = Song.find_by(id: params[:id])
+    @song.destroy
+    render json: { message: "song deleted" }
+  end
 end
