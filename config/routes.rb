@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   post "/songs" => "songs#create"
   #read
   get "/songs/:id" => "songs#show"
+  #update
+  patch "/songs/:id" => "songs#update"
 end
